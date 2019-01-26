@@ -39,7 +39,8 @@ class Awal extends CI_Controller
 
     public function listData()
     {
-        $q    = $this->mod_user->datanya(5);
+        $limit = $this->input->get_post('limit');
+        $q    = $this->mod_user->datanya($limit);
         $json = array();
         if ($q->num_rows() == true) {
             $status = 'ada';
@@ -59,6 +60,7 @@ class Awal extends CI_Controller
             'status'       => $status,
             'data'         => $json,
             'jumlah'       => $q->num_rows(),
+            'limit'        => $limit,
             'jumlah_total' => $this->mod_user->datanya()->num_rows(),
         ));
     }

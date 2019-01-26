@@ -11,7 +11,10 @@ var jd = $('.jumlah-datanya');
 // datanya
 var datanya = $('.datanya');
 // untuk request datanya lewat
-var listDatanya = () => {
+var btn_aksinya = $('.btn-aksinya');
+var aksinya = $('.aksinya');
+var angka = 5;
+var listDatanya = (limit) => {
     var ls = '<tr>' + '<td colspan="5" class="text-center">Tunggu Sebentar</td>' + '</tr>';
     jd.text('Tunggu yah....');
     datanya.html(ls);
@@ -22,6 +25,7 @@ var listDatanya = () => {
         data: {
             mencari: mencari.val(),
             gender: gender.val(),
+            limit: limit,
         },
         success: (e) => {
             ls = '';
@@ -33,6 +37,13 @@ var listDatanya = () => {
             } else {
                 ls = '<tr>' + '<td colspan="5" class="text-center">Tidak ada data</td>' + '</tr>'
             }
+            console.log(e.limit);
+            if (e.limit < e.jumlah_total) {
+                angka = parseInt(angka) + parseInt(limit);
+                aksinya.show();
+            }else{
+                aksinya.hide();
+            }
             jd.text(e.jumlah + ' Dari ' + e.jumlah_total + ' data user');
             datanya.html(ls);
         }
@@ -40,11 +51,14 @@ var listDatanya = () => {
 }
 // ready function
 $(() => {
-    listDatanya();
+    listDatanya(angka);
     mencari.on('keyup', (e) => {
-        listDatanya();
+        listDatanya(5);
     });
     gender.on('change', (e) => {
-        listDatanya();
+        listDatanya(5);
     });
+    btn_aksinya.on('click', (e) => {
+        listDatanya(angka);
+    })
 })

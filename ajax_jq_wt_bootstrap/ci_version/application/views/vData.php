@@ -85,6 +85,9 @@
 										</thead>
 									<tbody class="datanya"></tbody>
 									<tfoot>
+									<tr class="aksinya">
+										<th colspan="5" class="text-center"><a href="javascript:void(0)" class="btn-aksinya">Load More</a></th>
+									</tr>
 									<tr>
 										<th colspan="5" class="text-center jumlah-datanya"></th>
 									</tr>
