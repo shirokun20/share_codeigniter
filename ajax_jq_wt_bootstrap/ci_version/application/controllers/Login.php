@@ -24,8 +24,9 @@ class Login extends CI_Controller
     {
         $data = array(
             'judul' => 'Contoh Login dengan ajax',
+            'content' => 'content/vLogin',
         );
-        $this->liblat->page('vLogin', $data);
+        $this->liblat->page('vPages', $data);
     }
 
     protected function __validasi()

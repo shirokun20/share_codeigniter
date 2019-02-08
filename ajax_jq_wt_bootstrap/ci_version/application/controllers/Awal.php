@@ -25,16 +25,18 @@ class Awal extends CI_Controller
     {
         $data = array(
             'judul' => 'Contoh tabel dengan ajax codeigniter (bukan datatables)',
+            'content' => 'content/vData',
         );
-        $this->liblat->page('vData', $data);
+        $this->liblat->page('vPages', $data);
     }
 
     public function datanya2()
     {
         $data = array(
             'judul' => 'Contoh Tabel JS Dengan Rowspan',
+            'content' => 'content/vData2',
         );
-        $this->liblat->page('vData2', $data);
+        $this->liblat->page('vPages', $data);
     }
 
     public function listData()

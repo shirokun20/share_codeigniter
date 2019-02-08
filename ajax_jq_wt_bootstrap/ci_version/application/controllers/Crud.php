@@ -20,8 +20,9 @@ class Crud extends CI_Controller
     {
         $data = array(
             'judul' => 'Contoh Crud dengan ajax',
+            'content' => 'crud/vIndex',
         );
-        $this->liblat->page('crud/vIndex', $data);
+        $this->liblat->page('vPages', $data);
     }
 
     // List datanya
