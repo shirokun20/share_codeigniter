@@ -47,7 +47,7 @@
 							<div class="col-lg-6"></div>
 							<div class="col-lg-6 col-xs-12">
 								<div class="row">
-									<div class="col-lg-6 sKirim">
+									<div class="col-lg-12 sKirim">
 										<button class="btn btn-primary btn-block btn-sKirim">Kirim</button>
 									</div>
 								</div>
