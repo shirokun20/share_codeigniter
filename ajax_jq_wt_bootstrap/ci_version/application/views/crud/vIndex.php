@@ -92,7 +92,7 @@
 											<option value="">Pilih Tipe</option>
 											<?php foreach ($this->mod_sb->mengambil('type')->result() as $key): ?>
 											<option value="<?=$key->id?>"><?=$key->type_name?></option>
-											<?php endforeach ?>
+											<?php endforeach?>
 										</select>
 									</div>
 								</div>
@@ -209,6 +209,7 @@
 	</div>
 </div>
 </div>
-<script src="<?=base_url('assets/custom_js/users.js')?>"></script>
-<script src="<?=base_url('assets/custom_js/cud.js')?>"></script>
-<script src="<?=base_url('assets/custom_js/crud_master.js')?>"></script>
+<script src="<?=base_url('assets/custom_js/alert.class.js')?>"></script>
+<script src="<?=base_url('assets/custom_js/crud.class.js')?>"></script>
+<script src="<?=base_url('assets/custom_js/users.class.js')?>"></script>
+<script src="<?=base_url('assets/custom_js/crud.master.js')?>"></script>

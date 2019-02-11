@@ -106,6 +106,6 @@ class Users {
             $(tag.tanggal_lahir).val(e.tanggal_lahir2);
           }
         }
-      })
+      });
     }
 }
