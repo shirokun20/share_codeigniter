@@ -5,7 +5,7 @@ class Crud {
     }
     tambah(method, data, callback) {
         var aksi = $.ajax({
-            url: this.url + '/tambahSimpan',
+            url: this.url + 'tambahSimpan',
             data: data,
             dataType: "JSON",
             type: method,
@@ -16,7 +16,7 @@ class Crud {
     }
     mengambilData(request, callback = null) {
         var aksi = $.ajax({
-            url: this.url + '/listData/',
+            url: this.url + 'listData/',
             data: request.data,
             dataType: "JSON",
             type: request.method,
@@ -27,7 +27,7 @@ class Crud {
     }
     mengambil(request, callback = null) {
         var aksi = $.ajax({
-            url: this.url + '/ambilData/',
+            url: this.url + 'ambilData/',
             data: request.data,
             dataType: "JSON",
             type: request.method,
@@ -38,7 +38,7 @@ class Crud {
     }
     edit(method, data, callback = null) {
         var aksi = $.ajax({
-            url: this.url + '/editSimpan',
+            url: this.url + 'editSimpan',
             data: data,
             dataType: "JSON",
             type: method,
@@ -49,7 +49,7 @@ class Crud {
     }
     hapus(method, data, callback = null) {
         var aksi = $.ajax({
-            url: this.url + '/hapusData',
+            url: this.url + 'hapusData',
             data: data,
             dataType: "JSON",
             type: "POST",
