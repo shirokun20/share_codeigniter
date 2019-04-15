@@ -51,5 +51,4 @@
 		</div>
 	</div>
 </div>
-<script src="<?=base_url('assets/custom_js/datanya.js')?>"></script>
 </div>
